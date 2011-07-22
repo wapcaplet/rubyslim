@@ -116,13 +116,13 @@ Consider, for example, this fixtures class:
 
 This corresponds to the following tables.
 
-    |script|test slim with arguments|!{name:bob addr:here}|
+    |script|test slim with arguments|!{name:bob, addr:here}|
     |check|name|bob|
     |check|addr|here|
 
     |script|test slim with arguments|gunk|
     |check|arg|gunk|
-    |set arg|!{name:bob addr:here}|
+    |set arg|!{name:bob, addr:here}|
     |check|name|bob|
     |check|addr|here|
 
