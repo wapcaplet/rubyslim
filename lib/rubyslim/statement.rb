@@ -33,7 +33,12 @@ class Statement
     rescue SlimError => e
       [id, EXCEPTION_TAG + e.message]
     rescue Exception => e
-      [id, EXCEPTION_TAG + e.message + "\n" + e.backtrace.join("\n")]
+      message = EXCEPTION_TAG + e.message + "\n" + e.backtrace.join("\n")
+      if e.class.to_s =~ /StopTest/
+        [id, "STOP" + message]
+      else
+        [id, message]
+      end
     end
 
   end
