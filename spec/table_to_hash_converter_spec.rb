@@ -24,7 +24,7 @@ describe TableToHashConverter do
     [" <table> <tr> <td> name </td> <td> bob </td> </tr> </table> ", {:name=>"bob"}],
     ["<table><tr><td>name</td><td>bob</td></tr><tr><td>addr</td><td>here</td></tr></table>", {:name=>'bob', :addr=>'here'}]
   ].each do |table, hash|
-    it "should match #{table} to #{hash}" do
+    it "should match #{table} to #{hash.inspect}" do
       TableToHashConverter.convert(table).should == hash
     end
   end

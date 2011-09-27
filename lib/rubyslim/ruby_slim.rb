@@ -23,9 +23,9 @@ class RubySlim
   #
   #   length:command
   #
-  # Where `length` is a 6-digit indicating the length in bytes of `command`,
-  # and `command` is a serialized list of instructions that may include any
-  # of the four standard instructions in the SliM protocol:
+  # Where `length` is a 6-digit number indicating the length in bytes of
+  # `command`, and `command` is a serialized list of instructions that may
+  # include any of the four standard instructions in the SliM protocol:
   #
   #   Import: [<id>, import, <path>]
   #   Make: [<id>, make, <instance>, <class>, <arg>...]
